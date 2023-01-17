@@ -35,10 +35,11 @@
                         @auth
 
                             <li class="nav-item">
-<x-app-layout>
+ <a class="btn btn-primary" id="logincss" href="{{ route('login')  }}">Deconnexion</a>
+                                <x-app-layout>
 
 </x-app-layout>
- {{--  <a class="btn btn-primary" id="logincss" href="{{ route('login')  }}">Deconnexion</a>  --}}
+
                             </li>
 
                         @else
