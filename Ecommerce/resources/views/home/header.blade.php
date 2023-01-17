@@ -23,10 +23,21 @@
                         <li class="nav-item">
                            <a class="nav-link" href="blog_list.html">Blog</a>
                         </li>
+
+                        <form class="form-inline">
+                           <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                           <i class="fa fa-search" aria-hidden="true"></i>
+                           </button>
+                        </form>
+
                       <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact</a>
+                           <a class="btn btn-primary" id="logincss" href="contact.html">Connexion</a>
                         </li>
+
                         <li class="nav-item">
+                           <a class="btn btn-success" href="contact.html">Inscription</a>
+                        </li>
+                        {{--  <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                  <g>
@@ -81,12 +92,8 @@
                                  </g>
                               </svg>
                            </a>
-                        </li>
-                        <form class="form-inline">
-                           <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                           <i class="fa fa-search" aria-hidden="true"></i>
-                           </button>
-                        </form>
+                        </li>  --}}
+
                      </ul>
                   </div>
                </nav>
