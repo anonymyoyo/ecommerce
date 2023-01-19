@@ -32,7 +32,7 @@
 
                         @if (Route::has('login'))
 
-                        @auth
+                       @auth
 
                             <li class="nav-item">
  <a class="btn btn-primary" id="logincss" href="{{ route('login')  }}">Deconnexion</a>
