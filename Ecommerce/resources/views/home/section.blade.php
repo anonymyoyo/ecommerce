@@ -1,6 +1,6 @@
  @include('home.slider')
 
- <!-- end slider section -->
+ !-- end slider section -->
       </div>
       <!-- why section -->
  @include('home.why')
