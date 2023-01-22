@@ -39,7 +39,7 @@
                               {{--  <a class="btn btn-primary" id="logincss" href="{{ route('login')  }}">Deconnexion</a>  --}}
                                 <x-app-layout>
 
-</x-app-layout>
+                                </x-app-layout>
 
                             </li>
 
