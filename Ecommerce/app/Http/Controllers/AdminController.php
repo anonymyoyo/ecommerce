@@ -10,18 +10,19 @@ class AdminController extends Controller
     //
     public function view_category()
     {
-        return view('admin.category');
+        $data = Category::all();
+        return view('admin.category', compact('data'));
     }
 
     public function add_category(Request $request)
     {
-        $data = new category;
+        $data = new Category;
 
         $data->category_name = $request->category;
 
         $data->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message','Categorie ajoutee avec succes');
 
     }
 }

@@ -20,6 +20,15 @@
             color: black;
         }
 
+        .center
+        {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid aliceblue;
+        }
+
     </style>
   </head>
   <body>
@@ -32,6 +41,13 @@
 
         <div class="main-panel">
             <div class="content-wrapper">
+
+                @if(session()->has('message'))
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
 
                 <div class="div_center">
 
@@ -46,6 +62,25 @@
                         <input type="submit" name="submit" class="btn btn-primary" value="Ajouter">
                     </form>
                 </div>
+
+                <table class="center">
+                    <tr>
+                        <td>Nom de la categorie</td>
+                        <td>Action</td>
+                    </tr>
+
+                    @foreach ($data as $data)
+                        <tr>
+                            <td>
+                                {{ $data->category_name}}
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-danger">Supprimer</a>
+                            </td>
+                        </tr>
+                    @endforeach
+
+                </table>
             </div>
 
         </div>
