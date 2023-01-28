@@ -22,7 +22,7 @@ class AdminController extends Controller
 
         $data->save();
 
-        return redirect()->back()->with('message','Categorie ajoutee avec succes');
+        return redirect()->back()->with('ajout','Categorie ajoutee avec succes');
 
     }
 
@@ -31,6 +31,6 @@ class AdminController extends Controller
         $data = Category::find($id);
         $data->delete();
 
-        return redirect()->back()->with('message', 'Categorie supprimee avec succes');
+        return redirect()->back()->with('suppression', 'Categorie supprimee avec succes');
     }
 }

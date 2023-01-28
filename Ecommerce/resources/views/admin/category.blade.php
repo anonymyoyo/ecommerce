@@ -42,10 +42,17 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
-                @if(session()->has('message'))
+                @if(session()->has('ajout'))
                     <div class="alert alert-success">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                        {{ session()->get('message') }}
+                        {{ session()->get('ajout') }}
+                    </div>
+                @endif
+
+                @if(session()->has('suppression'))
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        {{ session()->get('suppression') }}
                     </div>
                 @endif
 
@@ -75,7 +82,7 @@
                                 {{ $data->category_name}}
                             </td>
                             <td>
-                                <a href="{{ url('delete_category', $data->id) }}" class="btn btn-danger">Supprimer</a>
+                                <a onclick="return confirm('Voulez-vous supprimer la categorie?')" href="{{ url('delete_category', $data->id) }}" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     @endforeach
