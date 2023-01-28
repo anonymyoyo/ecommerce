@@ -75,7 +75,7 @@
                                 {{ $data->category_name}}
                             </td>
                             <td>
-                                <a href="" class="btn btn-danger">Supprimer</a>
+                                <a href="{{ url('delete_category', $data->id) }}" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     @endforeach

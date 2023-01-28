@@ -25,4 +25,12 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Categorie ajoutee avec succes');
 
     }
+
+    public function delete_category($id)
+    {
+        $data = Category::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message', 'Categorie supprimee avec succes');
+    }
 }
